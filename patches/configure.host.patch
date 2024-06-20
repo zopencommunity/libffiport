@@ -1,0 +1,16 @@
+diff --git a/configure.host b/configure.host
+index 4cc69be..0a3163a 100644
+--- a/configure.host
++++ b/configure.host
+@@ -80,6 +80,11 @@ case "${host}" in
+ 	SOURCES="ffi.c hpux32.S"
+ 	;;
+ 
++  i370-*)
++        TARGET=ZOS; TARGETDIR=z
++	SOURCES="ffi64.c xplink.s"
++	;;
++
+   i?86-*-freebsd* | i?86-*-openbsd*)
+ 	TARGET=X86_FREEBSD; TARGETDIR=x86
+ 	;;

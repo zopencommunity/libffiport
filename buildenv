@@ -3,11 +3,13 @@
 # LIBFFI_VERSION="V.R.M" # Specify a stable release
 # export ZOPEN_STABLE_TAG="v${LIBFFI_VERSION}"
 export ZOPEN_STABLE_URL="https://github.com/libffi/libffi/releases/download/v3.4.5/libffi-3.4.5.tar.gz"
-export ZOPEN_STABLE_DEPS="m4 automake autoconf"
+export ZOPEN_STABLE_DEPS="make m4 automake autoconf"
 export ZOPEN_DEV_URL="https://github.com/libffi/libffi.git"
-export ZOPEN_DEV_DEPS="m4 automake autoconf"
-export ZOPEN_BUILD_LINE="DEV"
+export ZOPEN_DEV_DEPS="make m4 automake autoconf"
+export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_CATEGORIES="development"
+export ZOPEN_CONFIGURE_OPTS="--disable-dependency-tracking"
+export ZOPEN_COMP="CLANG"
 
 zopen_check_results()
 {
